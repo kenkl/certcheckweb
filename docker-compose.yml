@@ -1,0 +1,17 @@
+# For copypasta: docker-compose up --build -d
+# Have Fun!
+---
+version: '3'
+services:
+  ccw:
+    build: ccw
+    image: ccw
+    container_name: certcheckweb
+    volumes:
+    - /etc/comporium/ccw:/secrets
+    ports:
+    - '8192:5000/tcp'
+    environment:
+    - TZ="America/New_York"
+    restart: unless-stopped
+

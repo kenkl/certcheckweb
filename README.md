@@ -29,3 +29,7 @@ There's a bunch I could prattle on about here (what does 'secureemail' in config
 
 - initial release
 
+2021-11-12:
+
+- Corrected the Subject line creation for /email calls. Moving from SMTPLib to MIMEMultipart changes what _needs_ to be in that string.
+

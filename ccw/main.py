@@ -54,7 +54,7 @@ def email():
     
     # Build the email body based on the list we just assembled or a congratulations if we're at 0 this time.
     if expcount > 0:
-        subject=f'Subject: Certificates expiring soon ({prettydt})\n\n'
+        subject=f'Certificates expiring soon ({prettydt})'
         prefix=f'The following {expcount} certificates are expiring within {THRESHOLD} days:\n\n'
         text = prefix + report + "\n\nThe full list is available at " + LISTURL
         html = """\
@@ -81,7 +81,7 @@ def email():
         </html>
         """
     else:
-        subject=f'Subject: No certificates expiring soon ({prettydt})\n\n'
+        subject=f'No certificates expiring soon ({prettydt})'
         prefix=f'Good news!! No certificates in the watchlist are expiring within {THRESHOLD} days. Congrats!\n\n'
         text = prefix + "\n\nThe full list is available at " + LISTURL
         html = """\

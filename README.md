@@ -33,3 +33,6 @@ There's a bunch I could prattle on about here (what does 'secureemail' in config
 
 - Corrected the Subject line creation for /email calls. Moving from SMTPLib to MIMEMultipart changes what _needs_ to be in that string.
 
+2022-04-07:
+
+- Add 'ORDER BY' to sort the scan report by server name (hostname).

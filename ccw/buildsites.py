@@ -19,7 +19,7 @@ def buildserverlist():
             password=DBPASS,
             database=DBNAME
         ) as connection:
-            serverlistq = "SELECT * FROM serverlist"
+            serverlistq = "SELECT * FROM serverlist ORDER BY hostname ASC"
             with connection.cursor() as cursor:
                 cursor.execute(serverlistq)
                 result = cursor.fetchall()
